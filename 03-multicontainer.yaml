@@ -4,6 +4,7 @@ metadata:
   name: multicontainer-pod
   labels:
     project: roboshop
+
 spec:
   containers:
     - name: nginx
