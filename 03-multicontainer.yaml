@@ -4,9 +4,9 @@ metadata:
   name: multicontainer-pod
   labels:
     project: roboshop
-  spec:
-    containers:
-      - name: nginx
-        image: nginx
-      - name: almalinux
-        image: almalinux:9
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+    - name: almalinux
+      image: almalinux:9
