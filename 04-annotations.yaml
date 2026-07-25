@@ -6,8 +6,8 @@ metadata:
     project: roboshop
   annotations:
     imageregistry: "https://hub.docker.com"
-    jenkins-buildd-url: "https://jenkins.roboshop.com/job/roboshop/job/dev/job/devops90s/job/2"
-    spec:
-     containers:
-        - name: nginx
-          image: nginx
+    jenkins-build-url: "https://jenkins.roboshop.com/job/roboshop/job/dev/job/devops90s/job/2"
+  spec:
+    containers:
+    - name: nginx
+      image: nginx
