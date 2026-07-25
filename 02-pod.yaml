@@ -8,5 +8,5 @@ metadata:
     purpose: poc
 spec:
   containers:
-    - name: nginx
-      image: nginx
+    - name: nginx   # container name
+      image: nginx  # by default it will pull the latest image from docker hub
