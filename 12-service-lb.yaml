@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-np
+  labels:
+    project: roboshop
+    environment: dev
+spec:
+  type: LoadBalancer
+# service use below labels to identify the pods to which it will route the traffic
+  selector:
+    project: roboshop
+    environment: dev
+    component: frontend
+    tier: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30007

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: frontend
+  labels:
+    project: roboshop
+    tier: frontend
+    component: frontend
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  # replicaset uses below lables to mathch the poods
+  selector:
+    matchLabels:
+      project: roboshop
+      component: frontend
+      tier: frontend
+  # pod definition    
+  template:
+    metadata:
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: php-redis
+        image: us-docker.pkg.dev/google-samples/containers/gke/gb-frontend:v5
